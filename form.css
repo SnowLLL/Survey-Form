@@ -1,0 +1,95 @@
+/*
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;*/
+
+body{
+	font-family: 'poppins', sans-serif;
+	color: #f3f3f3;
+	line-height: 2rem;
+}
+
+body::before {
+	/*background - fixed*/
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+
+	/*! important*/
+	background-image:linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+	background-color: rgba(27, 27, 50, 0.8);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+h1, #description, #submit {
+	text-align: center;
+}
+
+#description
+{
+	font-style: italic;
+	font-size: 1.1rem;
+	text-shadow: 0.5px 0.5px #000000;
+}
+
+#survey-form {
+	color: white;
+	text-align: left;
+	background-color: rgba(27, 27, 50, 0.8);
+	width: 50%;
+	margin: 50px auto;
+	padding: 3rem;
+	box-sizing: border-box;
+}
+
+@media screen and (max-width: 1000px) {
+	#survey-form {
+		margin: 5px auto;
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#survey-form {
+		margin: 0px auto;
+		width: 100%;
+	}
+}
+
+label {
+	font-size: 1.1rem;
+}
+
+#name, #email, #number, input[list="features"], input[list="dropdown"] {
+	width: 100%;
+	box-sizing: border-box;
+	height: 2rem;
+	margin-top: 5px;
+	margin-bottom: 25px;
+}
+
+#comments {
+	width: 98%;
+	height: 5rem;
+}
+
+#submit {
+	margin-top: 1.2rem;
+	color: #f3f3f3;
+	font-size: 1rem;
+	font-weight: 300;
+	background-color: #37af65;
+	width: 100%;
+	height: 3rem;
+}
